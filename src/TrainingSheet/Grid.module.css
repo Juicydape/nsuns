@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1;
+
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.grid div {
+  padding: 0 1em;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.assistance {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr;
+
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.assistance div {
+    padding: 0 1em;
+    border: 1px solid white;
+    text-align: center;
+  }
