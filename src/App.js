@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import classes from "./App.module.css";
 
+import Header from "./Header/Header";
 import Evaluation from "./Evaluation/Evaluation";
 import Instructions from "./Instructions/Instructions";
 import Separator from "./UI/Separator/Separator";
@@ -39,25 +41,10 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        {" "}
-        <h1>nSuns Progresja liniowa</h1>
-        <nav>
-          <ul>
-            <a href="index.html">4d</a>
-          </ul>
-          <ul>
-            <a href="index.html">5d</a>
-          </ul>
-          <ul>
-            <a href="index.html">6d</a>
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
       <Instructions />
-      <Separator />
-      <main>
+      {/* <Separator /> */}
+      {/* <main>
         <Evaluation
           handleBench1RM={handleBench1RM}
           benchTM={benchTM}
@@ -70,15 +57,44 @@ function App() {
         />
         <Separator />
         <section>
-          <SixDays
-            benchTrainingMax={benchTrainingMax}
-            pressTrainingMax={militaryPressTrainingMax}
-            deadliftTrainingMax={deadliftTrainingMax}
-            squatTrainingMax={squatCalc}
-          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <FourDays
+                  benchTrainingMax={benchTrainingMax}
+                  pressTrainingMax={militaryPressTrainingMax}
+                  deadliftTrainingMax={deadliftTrainingMax}
+                  squatTrainingMax={squatCalc}
+                />
+              }
+            />
+            <Route
+              path="/5d"
+              element={
+                <FiveDays
+                  benchTrainingMax={benchTrainingMax}
+                  pressTrainingMax={militaryPressTrainingMax}
+                  deadliftTrainingMax={deadliftTrainingMax}
+                  squatTrainingMax={squatCalc}
+                />
+              }
+            />
+            <Route
+              path="/6d"
+              element={
+                <SixDays
+                  benchTrainingMax={benchTrainingMax}
+                  pressTrainingMax={militaryPressTrainingMax}
+                  deadliftTrainingMax={deadliftTrainingMax}
+                  squatTrainingMax={squatCalc}
+                />
+              }
+            />
+          </Routes>
         </section>
         <Separator className={classes["end-separator"]} />
-      </main>
+      </main> */}
     </div>
   );
 }

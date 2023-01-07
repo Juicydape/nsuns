@@ -1,5 +1,5 @@
 import Separator from "../UI/Separator/Separator";
-import styles from "./Instructions.module.css";
+import classes from "./Instructions.module.scss";
 
 const Instructions = () => {
   return (
@@ -12,7 +12,7 @@ const Instructions = () => {
         wykonywane są w zakresach serii / powtórzeń kulturystycznych i mogą być
         dostosowane do twoich potrzeb.
       </p>
-      <Separator />
+      <hr />
       <p>
         To, o ile zwiększysz swój maks treningowy zależy od twojego wyniku
         w serii <strong>1+</strong> danego dnia.

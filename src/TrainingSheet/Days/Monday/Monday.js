@@ -1,28 +1,32 @@
 import React from "react";
 import classes from '../../Grid.module.css'
+import { roundToTwoPointFive } from './roundingLogic'
+
 
 const Monday = (props) => {
+
     const benchProgression = [
-      props.benchTrainingMax * 0.65 + "kg x8",
-      props.benchTrainingMax * 0.75 + "kg x6",
-      props.benchTrainingMax * 0.85 + "kg x4",
-      props.benchTrainingMax * 0.85 + "kg x4",
-      props.benchTrainingMax * 0.85 + "kg x4",
-      props.benchTrainingMax * 0.8 + "kg x5",
-      props.benchTrainingMax * 0.75 + "kg x6",
-      props.benchTrainingMax * 0.7 + "kg x7",
-      props.benchTrainingMax * 0.65 + "kg x8+",
+      roundToTwoPointFive(props.benchTrainingMax * 0.65) + "kg x8",
+      roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x6",
+      roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x4",
+      roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x4",
+      roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x4",
+      roundToTwoPointFive(props.benchTrainingMax * 0.8) + "kg x5",
+      roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x6",
+      roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x7",
+      roundToTwoPointFive(props.benchTrainingMax * 0.65) + "kg x8+",
     ];
+
   
     const pressProgression = [
-      props.pressTrainingMax * 0.5 + "kg x6",
-      props.pressTrainingMax * 0.6 + "kg x5",
-      props.pressTrainingMax * 0.7 + "kg x3",
-      props.pressTrainingMax * 0.7 + "kg x5",
-      props.pressTrainingMax * 0.7 + "kg x7",
-      props.pressTrainingMax * 0.7 + "kg x4",
-      props.pressTrainingMax * 0.7 + "kg x6",
-      props.pressTrainingMax * 0.7 + "kg x8",
+      roundToTwoPointFive(props.pressTrainingMax * 0.5) + "kg x6",
+      roundToTwoPointFive(props.pressTrainingMax * 0.6) + "kg x5",
+      roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x3",
+      roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x5",
+      roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x7",
+      roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x4",
+      roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x6",
+      roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x8",
       " ",
     ];
   
