@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import classes from "../../Grid.module.scss";
+import { roundToTwoPointFive } from "../../../roundingLogic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
@@ -13,26 +14,26 @@ const Thursday = (props) => {
   };
 
   const benchProgression = [
-    props.benchTrainingMax * 0.75 + "kg x5",
-    props.benchTrainingMax * 0.85 + "kg x3",
-    props.benchTrainingMax * 0.95 + "kg x1+",
-    props.benchTrainingMax * 0.9 + "kg x3",
-    props.benchTrainingMax * 0.85 + "kg x3",
-    props.benchTrainingMax * 0.8 + "kg x3",
-    props.benchTrainingMax * 0.75 + "kg x3",
-    props.benchTrainingMax * 0.7 + "kg x3",
-    props.benchTrainingMax * 0.65 + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.95) + "kg x1+",
+    roundToTwoPointFive(props.benchTrainingMax * 0.9) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.8) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.65) + "kg x3",
   ];
 
   const closeGripBenchProgression = [
-    props.benchTrainingMax * 0.5 + "kg x6",
-    props.benchTrainingMax * 0.6 + "kg x5",
-    props.benchTrainingMax * 0.7 + "kg x3",
-    props.benchTrainingMax * 0.7 + "kg x5",
-    props.benchTrainingMax * 0.7 + "kg x7",
-    props.benchTrainingMax * 0.7 + "kg x4",
-    props.benchTrainingMax * 0.7 + "kg x6",
-    props.benchTrainingMax * 0.7 + "kg x8",
+    roundToTwoPointFive(props.benchTrainingMax * 0.5) + "kg x6",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x7",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x4",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x6",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x8",
     " ",
   ];
 

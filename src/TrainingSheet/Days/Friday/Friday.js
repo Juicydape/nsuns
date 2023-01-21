@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import classes from "../../Grid.module.scss";
-// import { roundToTwoPointFive } from "./roundingLogic";
+import { roundToTwoPointFive } from "../../../roundingLogic";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
@@ -15,27 +15,27 @@ const Friday = (props) => {
   };
 
   const frontSquatProgression = [
-    props.squatTrainingMax * 0.35 + "kg x5",
-    props.squatTrainingMax * 0.45 + "kg x5",
-    props.squatTrainingMax * 0.55 + "kg x3",
-    props.squatTrainingMax * 0.55 + "kg x5",
-    props.squatTrainingMax * 0.55 + "kg x7",
-    props.squatTrainingMax * 0.55 + "kg x4",
-    props.squatTrainingMax * 0.55 + "kg x6",
-    props.squatTrainingMax * 0.55 + "kg x8",
+    roundToTwoPointFive(props.squatTrainingMax * 0.35) + "kg x5",
+    roundToTwoPointFive(props.squatTrainingMax * 0.45) + "kg x5",
+    roundToTwoPointFive(props.squatTrainingMax * 0.55) + "kg x3",
+    roundToTwoPointFive(props.squatTrainingMax * 0.55) + "kg x5",
+    roundToTwoPointFive(props.squatTrainingMax * 0.55) + "kg x7",
+    roundToTwoPointFive(props.squatTrainingMax * 0.55) + "kg x4",
+    roundToTwoPointFive(props.squatTrainingMax * 0.55) + "kg x6",
+    roundToTwoPointFive(props.squatTrainingMax * 0.55) + "kg x8",
     " ",
   ];
 
   const deadliftProgression = [
-    props.deadliftTrainingMax * 0.75 + "kg x5",
-    props.deadliftTrainingMax * 0.85 + "kg x3",
-    props.deadliftTrainingMax * 0.95 + "kg x1+",
-    props.deadliftTrainingMax * 0.9 + "kg x3",
-    props.deadliftTrainingMax * 0.85 + "kg x3",
-    props.deadliftTrainingMax * 0.8 + "kg x3",
-    props.deadliftTrainingMax * 0.75 + "kg x3",
-    props.deadliftTrainingMax * 0.7 + "kg x3",
-    props.deadliftTrainingMax * 0.65 + "kg x3+",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.95) + "kg x1+",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.9) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.8) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.75) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.65) + "kg x3+",
   ];
 
   const deadlift = deadliftProgression.map((set) => {

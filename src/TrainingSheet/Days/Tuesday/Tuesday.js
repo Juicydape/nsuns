@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import classes from "../../Grid.module.scss";
+import { roundToTwoPointFive } from "../../../roundingLogic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
@@ -13,26 +14,26 @@ const Tuesday = (props) => {
   };
 
   const squatProgression = [
-    props.squatTrainingMax * 0.75 + "kg x5",
-    props.squatTrainingMax * 0.85 + "kg x3",
-    props.squatTrainingMax * 0.95 + "kg x1+",
-    props.squatTrainingMax * 0.9 + "kg x3",
-    props.squatTrainingMax * 0.85 + "kg x3",
-    props.squatTrainingMax * 0.8 + "kg x3",
-    props.squatTrainingMax * 0.75 + "kg x5",
-    props.squatTrainingMax * 0.7 + "kg x5",
-    props.squatTrainingMax * 0.65 + "kg x5+",
+    roundToTwoPointFive(props.squatTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.squatTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.squatTrainingMax * 0.95) + "kg x1+",
+    roundToTwoPointFive(props.squatTrainingMax * 0.9) + "kg x3",
+    roundToTwoPointFive(props.squatTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.squatTrainingMax * 0.8) + "kg x3",
+    roundToTwoPointFive(props.squatTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.squatTrainingMax * 0.7) + "kg x5",
+    roundToTwoPointFive(props.squatTrainingMax * 0.65) + "kg x5+",
   ];
 
   const sumoDeadliftProgression = [
-    props.deadliftTrainingMax * 0.5 + "kg x5",
-    props.deadliftTrainingMax * 0.6 + "kg x5",
-    props.deadliftTrainingMax * 0.7 + "kg x3",
-    props.deadliftTrainingMax * 0.7 + "kg x5",
-    props.deadliftTrainingMax * 0.7 + "kg x7",
-    props.deadliftTrainingMax * 0.7 + "kg x4",
-    props.deadliftTrainingMax * 0.7 + "kg x6",
-    props.deadliftTrainingMax * 0.7 + "kg x8",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.5) + "kg x5",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.6) + "kg x5",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x3",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x5",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x7",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x4",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x6",
+    roundToTwoPointFive(props.deadliftTrainingMax * 0.7) + "kg x8",
     " ",
   ];
 
