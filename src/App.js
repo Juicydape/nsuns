@@ -15,8 +15,11 @@ function App() {
   const [squatTM, setSquatTM] = useState("");
   const [squatCalc, setSquatCalc] = useState("");
   const [benchTM, setBenchTM] = useState("");
+  const [benchCalc, setBenchCalc] = useState("");
   const [deadliftTM, setDeadliftTM] = useState("");
+  const [deadliftCalc, setDeadliftCalc] = useState("");
   const [pressTM, setPressTM] = useState("");
+  const [pressCalc, setPressCalc] = useState("")
 
   const handleSquat1RM = (event) => {
     setSquatCalc(0.9 * event.target.value);
