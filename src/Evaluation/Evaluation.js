@@ -1,16 +1,32 @@
 import React, { useState } from "react";
+import classes from "./Evaluation.module.scss";
 
-import styles from "./Evaluation.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Evaluation = (props) => {
-  return (
-    <section>
-      <h2>n-Suns 531 LP 4 dni</h2>
-      <form>
-        <div className={styles["exercise-container"]}>
-          <h3>Przysiad:</h3>
+  const [showSection, setShowSection] = useState(true);
 
-          <div className={styles["label-container"]}>
+  const handleShowSection = () => {
+    setShowSection((prevState) => {
+      return !prevState;
+    });
+  };
+
+  return (
+    <section className={classes.eval}>
+      <h2 className={classes.eval__heading}>
+        Wprowadź wyniki{" "}
+        <button className={classes["eval__fold-icon"]} onClick={handleShowSection}>
+          {showSection ? <FontAwesomeIcon icon={solid("arrow-up")} /> : <FontAwesomeIcon icon={solid("arrow-down")} /> }
+        </button>
+      </h2>
+
+      {showSection && <form>
+        <div className={classes["exercise-container"]}>
+          <h3 className={classes.eval__title}>Przysiad:</h3>
+
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="squat-1RM">1RM:</label>
             <input
               type="number"
@@ -19,7 +35,7 @@ const Evaluation = (props) => {
               onBlur={props.handleSquat1RM}
             />
           </div>
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="squat-TM">TM:</label>
             <input
               type="number"
@@ -31,10 +47,10 @@ const Evaluation = (props) => {
           </div>
         </div>
 
-        <div className={styles["exercise-container"]}>
-          <h3>Wyciskanie płasko:</h3>
+        <div className={classes["exercise-container"]}>
+          <h3 className={classes.eval__title}>Wyciskanie płasko:</h3>
 
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="bench-1RM">1RM:</label>
             <input
               type="number"
@@ -43,7 +59,7 @@ const Evaluation = (props) => {
               onBlur={props.handleBench1RM}
             />
           </div>
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="bench-TM">TM:</label>
             <input
               type="number"
@@ -55,10 +71,10 @@ const Evaluation = (props) => {
           </div>
         </div>
 
-        <div className={styles["exercise-container"]}>
-          <h3>Martwy ciąg:</h3>
+        <div className={classes["exercise-container"]}>
+          <h3 className={classes.eval__title}>Martwy ciąg:</h3>
 
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="deadlift-1RM">1RM:</label>
             <input
               type="number"
@@ -67,7 +83,7 @@ const Evaluation = (props) => {
               onBlur={props.handleDeadlift1RM}
             />
           </div>
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="deadlift-TM">TM:</label>
             <input
               type="number"
@@ -79,10 +95,10 @@ const Evaluation = (props) => {
           </div>
         </div>
 
-        <div className={styles["exercise-container"]}>
-          <h3>Wyciskanie żołnierskie:</h3>
+        <div className={classes["exercise-container"]}>
+          <h3 className={classes.eval__title}>Wyciskanie żołnierskie:</h3>
 
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="press-1RM">1RM:</label>
             <input
               type="number"
@@ -91,7 +107,7 @@ const Evaluation = (props) => {
               onBlur={props.handlePress1RM}
             />
           </div>
-          <div className={styles["label-container"]}>
+          <div className={classes["eval__label-container"]}>
             <label htmlFor="press-TM">TM:</label>
             <input
               type="number"
@@ -102,7 +118,7 @@ const Evaluation = (props) => {
             />
           </div>
         </div>
-      </form>
+      </form>}
     </section>
   );
 };

@@ -1,7 +1,16 @@
-import React from "react";
-import classes from "../../Grid.module.css";
+import React, { useState, Fragment } from "react";
+import classes from "../../Grid.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Saturday6d = (props) => {
+  const [showSection, setShowSection] = useState(true);
+
+  const handleShowSection = () => {
+    setShowSection((prevState) => {
+      return !prevState;
+    });
+  };
   const frontSquatProgression = [
     props.squatTrainingMax * 0.727 + "kg x3",
     props.squatTrainingMax * 0.727 + "kg x3",
@@ -11,7 +20,7 @@ const Saturday6d = (props) => {
     props.squatTrainingMax * 0.727 + "kg x3",
     props.squatTrainingMax * 0.727 + "kg x3",
     props.squatTrainingMax * 0.727 + "kg x3",
-    " "
+    " ",
   ];
 
   const deadliftProgression = [
@@ -23,48 +32,65 @@ const Saturday6d = (props) => {
     props.deadliftTrainingMax * 0.5625 + "kg x3",
     " ",
     " ",
-    " "
+    " ",
   ];
 
   const deadlift = deadliftProgression.map((set) => {
     return (
-      <div>
-        <p key={deadliftProgression.indexOf}>{set}</p>
-      </div>
+      <p
+        className={classes["day-container__exercise"]}
+        key={deadliftProgression.indexOf}
+      >
+        {set}
+      </p>
     );
   });
 
   const frontSquat = frontSquatProgression.map((set) => {
     return (
-      <div>
-        <p key={frontSquatProgression.indexOf}>{set}</p>
-      </div>
+      <p
+        className={classes["day-container__exercise"]}
+        key={frontSquatProgression.indexOf}
+      >
+        {set}
+      </p>
     );
   });
 
   return (
-    <div>
-      <h3>Sobota</h3>
-      <div className={classes.grid}>
-        <div>
-          <p>Martwy Ciąg</p>
-        </div>
-        {deadlift}
-      </div>
-      <div className={classes.grid}>
-        <div>
-          <p>Przysiad przedni</p>
-        </div>
-        {frontSquat}
-      </div>
-      <div className={classes.assistance}>
-        <div>
-          <p>Asysty</p>
-        </div>
-        <div>
-          <p>Nogi, brzuch</p>
-        </div>
-      </div>
+    <div className={classes["day-container"]}>
+      <h3 className={classes["day-container__title"]}>
+        Sobota <button
+          className={classes["day-container__fold-icon"]}
+          onClick={handleShowSection}
+        >
+          {showSection ? (
+            <FontAwesomeIcon icon={solid("arrow-up")} />
+          ) : (
+            <FontAwesomeIcon icon={solid("arrow-down")} />
+          )}
+        </button>
+      </h3>
+      {showSection && (
+        <Fragment>
+          <div className={classes["day-container__grid"]}>
+            <p className={classes["day-container__exercise-title"]}>
+              Martwy Ciąg
+            </p>
+            {deadlift}
+          </div>
+          <div className={classes["day-container__grid"]}>
+            <p className={classes["day-container__exercise-title"]}>
+              Przysiad przedni
+            </p>
+            {frontSquat}
+          </div>
+          <div className={classes["day-container__assistance-work"]}>
+            <p className={classes["day-container__exercise-title"]}>Asysty</p>
+            <p className={classes["day-container__exercise"]}>Nogi, brzuch</p>
+          </div>
+        </Fragment>
+      )}
     </div>
   );
 };

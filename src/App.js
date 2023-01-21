@@ -42,9 +42,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Instructions />
-      {/* <Separator /> */}
-      {/* <main>
+      {/* <Instructions /> */}
+      <Separator />
+      <main>
         <Evaluation
           handleBench1RM={handleBench1RM}
           benchTM={benchTM}
@@ -94,7 +94,7 @@ function App() {
           </Routes>
         </section>
         <Separator className={classes["end-separator"]} />
-      </main> */}
+      </main>
     </div>
   );
 }

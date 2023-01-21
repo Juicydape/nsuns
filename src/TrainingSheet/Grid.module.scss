@@ -1,0 +1,55 @@
+.day-container {
+  max-width: 300px;
+  margin: 0 auto;
+
+  &__fold-icon {
+    background: none;
+    border: none;
+    color: white;
+  }
+
+  &__title {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+
+  &__exercise-title {
+    margin: 0.5em 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__exercise {
+    padding: 0.2em 1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .day-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    &__assistance-work {
+      display: grid;
+      grid-template-columns: 1fr 9fr;
+    }
+
+    &__exercise-title {
+      width: 105px;
+      height: 60px;
+      margin: unset;
+      border: 1px solid white;
+    }
+
+    &__exercise { 
+      height: 60px;
+      border: 1px solid white;
+    }
+  }
+}

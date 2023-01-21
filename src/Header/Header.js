@@ -5,9 +5,6 @@ import classes from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   solid,
-  regular,
-  brands,
-  icon,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const Header = () => {
