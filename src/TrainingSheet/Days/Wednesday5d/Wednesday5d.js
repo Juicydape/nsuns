@@ -14,26 +14,26 @@ const Wednesday5d = (props) => {
   };
 
   const pressProgression = [
-    roundToTwoPointFive(props.pressTrainingMax) * 0.75 + "kg x5",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.85 + "kg x3",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.95 + "kg x1+",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.9 + "kg x3",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.85 + "kg x3",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.8 + "kg x3",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.75 + "kg x5",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.7 + "kg x5",
-    roundToTwoPointFive(props.pressTrainingMax) * 0.65 + "kg x5+",
+    roundToTwoPointFive(props.pressTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.pressTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.pressTrainingMax * 0.95) + "kg x1+",
+    roundToTwoPointFive(props.pressTrainingMax * 0.9) + "kg x3",
+    roundToTwoPointFive(props.pressTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.pressTrainingMax * 0.8) + "kg x3",
+    roundToTwoPointFive(props.pressTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x5",
+    roundToTwoPointFive(props.pressTrainingMax * 0.65) + "kg x5+",
   ];
 
   const inclineBenchProgression = [
-    roundToTwoPointFive(props.benchTrainingMax) * 0.4 + "kg x6",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.5 + "kg x5",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.6 + "kg x3",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.6 + "kg x5",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.6 + "kg x7",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.6 + "kg x4",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.6 + "kg x6",
-    roundToTwoPointFive(props.benchTrainingMax) * 0.6 + "kg x8",
+    roundToTwoPointFive(props.benchTrainingMax * 0.4) + "kg x6",
+    roundToTwoPointFive(props.benchTrainingMax * 0.5) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x7",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x4",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x6",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x8",
     " ",
   ];
 

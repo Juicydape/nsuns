@@ -15,7 +15,7 @@ const FiveDays = (props) => {
       <Tuesday
         nameVariant={"Wtorek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
       <Wednesday5d
         benchTrainingMax={props.benchTrainingMax}
