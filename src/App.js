@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import classes from "./App.module.css";
 
@@ -6,7 +6,7 @@ import { roundToTwoPointFive } from "./roundingLogic";
 
 import Header from "./Header/Header";
 import Evaluation from "./Evaluation/Evaluation";
-import Instructions from "./Instructions/Instructions";
+// import Instructions from "./Instructions/Instructions";
 import Separator from "./UI/Separator/Separator";
 
 import FourDays from "./TrainingSheet/FourDays/FourDays";
@@ -47,7 +47,6 @@ function App() {
     <div className="App">
       <Header />
       {/* <Instructions /> */}
-      <Separator />
       <main>
         <Evaluation
           handleBench1RM={handleBench1RM}
@@ -98,6 +97,7 @@ function App() {
           </Routes>
         </section>
         <Separator className={classes["end-separator"]} />
+        <p>Piotr Materna, {new Date().getFullYear()}</p>
       </main>
     </div>
   );
