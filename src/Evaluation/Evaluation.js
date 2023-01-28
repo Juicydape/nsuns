@@ -15,7 +15,7 @@ const Evaluation = (props) => {
   return (
     <section className={classes.eval}>
       <h2 className={classes.eval__heading}>
-        Wprowadź wyniki{" "}
+        Wprowadź wyniki
         <button
           className={classes["eval__fold-icon"]}
           onClick={handleShowSection}
@@ -29,8 +29,8 @@ const Evaluation = (props) => {
       </h2>
 
       {showSection && (
-        <form>
-          <div className={classes["exercise-container"]}>
+        <form className={classes.eval__form}>
+          <div className={classes["eval__exercise-container"]}>
             <h3 className={classes.eval__title}>Przysiad:</h3>
 
             <div className={classes["eval__label-container"]}>
@@ -54,7 +54,7 @@ const Evaluation = (props) => {
             </div>
           </div>
 
-          <div className={classes["exercise-container"]}>
+          <div className={classes["eval__exercise-container"]}>
             <h3 className={classes.eval__title}>Wyciskanie płasko:</h3>
 
             <div className={classes["eval__label-container"]}>
@@ -78,7 +78,7 @@ const Evaluation = (props) => {
             </div>
           </div>
 
-          <div className={classes["exercise-container"]}>
+          <div className={classes["eval__exercise-container"]}>
             <h3 className={classes.eval__title}>Martwy ciąg:</h3>
 
             <div className={classes["eval__label-container"]}>
@@ -102,7 +102,7 @@ const Evaluation = (props) => {
             </div>
           </div>
 
-          <div className={classes["exercise-container"]}>
+          <div className={classes["eval__exercise-container"]}>
             <h3 className={classes.eval__title}>Wyciskanie żołnierskie:</h3>
 
             <div className={classes["eval__label-container"]}>
