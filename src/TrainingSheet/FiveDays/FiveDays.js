@@ -10,21 +10,21 @@ const FiveDays = (props) => {
     <Fragment>
       <Monday
         benchTrainingMax={props.benchTrainingMax}
-        pressTrainingMax={props.militaryPressTrainingMax}
+        pressTrainingMax={props.pressTrainingMax}
       />
       <Tuesday
         nameVariant={"Wtorek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
       <Wednesday5d
         benchTrainingMax={props.benchTrainingMax}
-        pressTrainingMax={props.militaryPressTrainingMax}
+        pressTrainingMax={props.pressTrainingMax}
       />
       <Friday
         nameVariant={"Czwartek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
       <Thursday
       nameVariant={"Piątek"}

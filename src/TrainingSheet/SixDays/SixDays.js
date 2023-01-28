@@ -2,35 +2,41 @@ import React, { Fragment } from "react";
 import Monday from "../Days/Monday/Monday";
 import Friday from "../Days/Friday/Friday"; //Tuesday
 import Wednesday5d from "../Days/Wednesday5d/Wednesday5d";
-import Tuesday from "../Days/Tuesday/Tuesday";//Thursday
+import Tuesday from "../Days/Tuesday/Tuesday"; //Thursday
 import Thursday from "../Days/Thursday/Thursday"; // Friday
-import Saturday6d from '../Days/Saturday6d/Saturday6d'
+import Saturday6d from "../Days/Saturday6d/Saturday6d";
 
 const SixDays = (props) => {
-    return (<Fragment>
+  return (
+    <Fragment>
       <Monday
         benchTrainingMax={props.benchTrainingMax}
-        pressTrainingMax={props.militaryPressTrainingMax}
+        pressTrainingMax={props.pressTrainingMax}
       />
       <Friday
         nameVariant={"Wtorek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
       <Wednesday5d
         benchTrainingMax={props.benchTrainingMax}
-        pressTrainingMax={props.militaryPressTrainingMax}
+        pressTrainingMax={props.pressTrainingMax}
       />
       <Tuesday
         nameVariant={"Czwartek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
-        <Thursday
-      nameVariant={"Piątek"}
-      benchTrainingMax={props.benchTrainingMax} />
-        <Saturday6d />
-    </Fragment>)
-}
+      <Thursday
+        nameVariant={"Piątek"}
+        benchTrainingMax={props.benchTrainingMax}
+      />
+      <Saturday6d
+        deadliftTrainingMax={props.deadliftTrainingMax}
+        squatTrainingMax={props.squatTrainingMax}
+      />
+    </Fragment>
+  );
+};
 
-export default SixDays
+export default SixDays;

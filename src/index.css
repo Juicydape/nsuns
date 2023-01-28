@@ -23,6 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: var(--dark-bg);
+  background-color: #5f5c6b;
   color: white;
 }

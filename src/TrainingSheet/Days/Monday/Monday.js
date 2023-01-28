@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import classes from "../../Grid.module.scss";
-import { roundToTwoPointFive } from "./roundingLogic";
-
+import { roundToTwoPointFive } from "../../../roundingLogic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 

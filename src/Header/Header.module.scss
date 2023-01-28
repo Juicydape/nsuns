@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: var(--dark-bg);
 
   &__heading {
     padding: 0.2em 0;

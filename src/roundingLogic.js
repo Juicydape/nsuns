@@ -40,7 +40,9 @@ export const roundToTwoPointFive = (number) => {
   } else if (input >= 6.25 && input < 8.75) {
     input = 7.5;
   } else {
-    input = 10;
+    // When singles become tens
+    input = 0;
+    result[result.length - 1]++
   }
 
   result.push(input);

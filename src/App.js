@@ -1,10 +1,12 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import classes from "./App.module.css";
 
+import { roundToTwoPointFive } from "./roundingLogic";
+
 import Header from "./Header/Header";
 import Evaluation from "./Evaluation/Evaluation";
-import Instructions from "./Instructions/Instructions";
+// import Instructions from "./Instructions/Instructions";
 import Separator from "./UI/Separator/Separator";
 
 import FourDays from "./TrainingSheet/FourDays/FourDays";
@@ -15,8 +17,11 @@ function App() {
   const [squatTM, setSquatTM] = useState("");
   const [squatCalc, setSquatCalc] = useState("");
   const [benchTM, setBenchTM] = useState("");
+  const [benchCalc, setBenchCalc] = useState("");
   const [deadliftTM, setDeadliftTM] = useState("");
+  const [deadliftCalc, setDeadliftCalc] = useState("");
   const [pressTM, setPressTM] = useState("");
+  const [pressCalc, setPressCalc] = useState("");
 
   const handleSquat1RM = (event) => {
     setSquatCalc(0.9 * event.target.value);
@@ -24,26 +29,24 @@ function App() {
   };
 
   const handleBench1RM = (event) => {
-    setBenchTM(2.5 * Math.ceil((0.9 * event.target.value) / 2.5));
+    setBenchCalc(0.9 * event.target.value);
+    setBenchTM(roundToTwoPointFive(0.9 * event.target.value));
   };
 
   const handleDeadlift1RM = (event) => {
-    setDeadliftTM(2.5 * Math.ceil((0.9 * event.target.value) / 2.5));
+    setDeadliftCalc(0.9 * event.target.value);
+    setDeadliftTM(roundToTwoPointFive(0.9 * event.target.value));
   };
 
   const handlePress1RM = (event) => {
-    setPressTM(2.5 * Math.ceil((0.9 * event.target.value) / 2.5));
+    setPressCalc(0.9 * event.target.value);
+    setPressTM(roundToTwoPointFive(0.9 * event.target.value));
   };
-
-  const benchTrainingMax = benchTM;
-  const deadliftTrainingMax = deadliftTM;
-  const militaryPressTrainingMax = pressTM;
 
   return (
     <div className="App">
       <Header />
       {/* <Instructions /> */}
-      <Separator />
       <main>
         <Evaluation
           handleBench1RM={handleBench1RM}
@@ -62,9 +65,9 @@ function App() {
               path="/"
               element={
                 <FourDays
-                  benchTrainingMax={benchTrainingMax}
-                  pressTrainingMax={militaryPressTrainingMax}
-                  deadliftTrainingMax={deadliftTrainingMax}
+                  benchTrainingMax={benchCalc}
+                  pressTrainingMax={pressCalc}
+                  deadliftTrainingMax={deadliftCalc}
                   squatTrainingMax={squatCalc}
                 />
               }
@@ -73,9 +76,9 @@ function App() {
               path="/5d"
               element={
                 <FiveDays
-                  benchTrainingMax={benchTrainingMax}
-                  pressTrainingMax={militaryPressTrainingMax}
-                  deadliftTrainingMax={deadliftTrainingMax}
+                  benchTrainingMax={benchCalc}
+                  pressTrainingMax={pressCalc}
+                  deadliftTrainingMax={deadliftCalc}
                   squatTrainingMax={squatCalc}
                 />
               }
@@ -84,9 +87,9 @@ function App() {
               path="/6d"
               element={
                 <SixDays
-                  benchTrainingMax={benchTrainingMax}
-                  pressTrainingMax={militaryPressTrainingMax}
-                  deadliftTrainingMax={deadliftTrainingMax}
+                  benchTrainingMax={benchCalc}
+                  pressTrainingMax={pressCalc}
+                  deadliftTrainingMax={deadliftCalc}
                   squatTrainingMax={squatCalc}
                 />
               }
@@ -94,6 +97,7 @@ function App() {
           </Routes>
         </section>
         <Separator className={classes["end-separator"]} />
+        <p>Piotr Materna, {new Date().getFullYear()}</p>
       </main>
     </div>
   );

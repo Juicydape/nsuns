@@ -9,12 +9,12 @@ const FourDays = (props) => {
     <Fragment>
       <Monday
         benchTrainingMax={props.benchTrainingMax}
-        pressTrainingMax={props.militaryPressTrainingMax}
+        pressTrainingMax={props.pressTrainingMax}
       />
       <Tuesday
         nameVariant={"Wtorek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
       <Thursday
       nameVariant={"Czwartek"}
@@ -22,7 +22,7 @@ const FourDays = (props) => {
       <Friday
         nameVariant={"Piątek"}
         deadliftTrainingMax={props.deadliftTrainingMax}
-        squatTrainingMax={props.squatCalc}
+        squatTrainingMax={props.squatTrainingMax}
       />
     </Fragment>
   );
