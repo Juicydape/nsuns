@@ -15,12 +15,17 @@
 
   &__exercise-title {
     margin: 0.5em 0;
+    background-color: var(--dark-bg);
     font-weight: bold;
     text-transform: uppercase;
   }
 
   &__exercise {
     padding: 0.2em 1em;
+
+    &:nth-of-type(2n) {
+      background-color: var(--dark-bg);
+    }
   }
 }
 
@@ -41,15 +46,16 @@
     }
 
     &__exercise-title {
-      width: 105px;
+      box-sizing: content-box;
+      padding: 0 0.5em;
+      width: 150px;
       height: 60px;
+      text-align: center;
       margin: unset;
-      border: 1px solid white;
     }
 
     &__exercise { 
       height: 60px;
-      border: 1px solid white;
     }
   }
 }
