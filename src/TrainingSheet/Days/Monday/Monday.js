@@ -89,7 +89,7 @@ const Monday = (props) => {
           </div>
           <div className={classes["day-container__assistance-work"]}>
             <p className={classes["day-container__exercise-title"]}>Asysty</p>
-            <p className={classes["day-container__exercise"]}>
+            <p className={classes["day-container__exercise"] + " " + classes["day-container__exercise--assistance"]}>
               Klatka, ramiona, plecy
             </p>
           </div>
