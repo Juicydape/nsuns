@@ -4,7 +4,7 @@ import { roundToTwoPointFive } from "../../../roundingLogic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const Monday = (props) => {
+const UniversalDayPrototype = (props) => {
   const [showSection, setShowSection] = useState(true);
 
   const handleShowSection = () => {
@@ -14,30 +14,30 @@ const Monday = (props) => {
   };
 
   const benchProgression = [
-    roundToTwoPointFive(props.benchTrainingMax * 0.65) + "kg x8",
-    roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x6",
-    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x4",
-    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x4",
-    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x4",
-    roundToTwoPointFive(props.benchTrainingMax * 0.8) + "kg x5",
-    roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x6",
-    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x7",
-    roundToTwoPointFive(props.benchTrainingMax * 0.65) + "kg x8+",
+    roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.95) + "kg x1+",
+    roundToTwoPointFive(props.benchTrainingMax * 0.9) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.85) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.8) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.75) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.65) + "kg x3",
   ];
 
-  const pressProgression = [
-    roundToTwoPointFive(props.pressTrainingMax * 0.5) + "kg x6",
-    roundToTwoPointFive(props.pressTrainingMax * 0.6) + "kg x5",
-    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x3",
-    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x5",
-    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x7",
-    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x4",
-    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x6",
-    roundToTwoPointFive(props.pressTrainingMax * 0.7) + "kg x8",
+  const closeGripBenchProgression = [
+    roundToTwoPointFive(props.benchTrainingMax * 0.5) + "kg x6",
+    roundToTwoPointFive(props.benchTrainingMax * 0.6) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x3",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x5",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x7",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x4",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x6",
+    roundToTwoPointFive(props.benchTrainingMax * 0.7) + "kg x8",
     " ",
   ];
 
-  const benchPress = benchProgression.map((set) => {
+  const primaryExercise = benchProgression.map((set) => {
     return (
       <p
         className={classes["day-container__exercise"]}
@@ -48,11 +48,11 @@ const Monday = (props) => {
     );
   });
 
-  const militaryPress = pressProgression.map((set) => {
+  const secondaryExercise = closeGripBenchProgression.map((set) => {
     return (
       <p
         className={classes["day-container__exercise"]}
-        key={pressProgression.indexOf}
+        key={closeGripBenchProgression.indexOf}
       >
         {set}
       </p>
@@ -62,7 +62,8 @@ const Monday = (props) => {
   return (
     <div className={classes["day-container"]}>
       <h3 className={classes["day-container__title"]}>
-        Poniedziałek <button
+        {props.nameVariant}
+        <button
           className={classes["day-container__fold-icon"]}
           onClick={handleShowSection}
         >
@@ -79,19 +80,17 @@ const Monday = (props) => {
             <p className={classes["day-container__exercise-title"]}>
               Wyciskanie płasko
             </p>
-            {benchPress}
+            {primaryExercise}
           </div>
           <div className={classes["day-container__grid"]}>
             <p className={classes["day-container__exercise-title"]}>
-              Wyciskanie żołnierskie
+              Wyciskanie wąsko
             </p>
-            {militaryPress}
+            {secondaryExercise}
           </div>
           <div className={classes["day-container__assistance-work"]}>
             <p className={classes["day-container__exercise-title"]}>Asysty</p>
-            <p className={classes["day-container__exercise"] + " " + classes["day-container__exercise--assistance"]}>
-              Klatka, ramiona, plecy
-            </p>
+            <p className={classes["day-container__exercise"] + " " + classes["day-container__exercise--assistance"]}>Ramiona, inne</p>
           </div>
         </Fragment>
       )}
@@ -99,4 +98,4 @@ const Monday = (props) => {
   );
 };
 
-export default Monday;
+export default UniversalDayPrototype;

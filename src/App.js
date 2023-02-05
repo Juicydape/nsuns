@@ -15,17 +15,17 @@ import SixDays from "./TrainingSheet/SixDays/SixDays";
 
 function App() {
   const [squatTM, setSquatTM] = useState("");
-  const [squatCalc, setSquatCalc] = useState("");
+  const [squatCalc, setSquatCalc] = useState("220");
   const [benchTM, setBenchTM] = useState("");
-  const [benchCalc, setBenchCalc] = useState("");
+  const [benchCalc, setBenchCalc] = useState("140");
   const [deadliftTM, setDeadliftTM] = useState("");
-  const [deadliftCalc, setDeadliftCalc] = useState("");
+  const [deadliftCalc, setDeadliftCalc] = useState("300");
   const [pressTM, setPressTM] = useState("");
-  const [pressCalc, setPressCalc] = useState("");
+  const [pressCalc, setPressCalc] = useState("100");
 
   const handleSquat1RM = (event) => {
     setSquatCalc(0.9 * event.target.value);
-    setSquatTM(2.5 * Math.ceil((0.9 * event.target.value) / 2.5));
+    setSquatTM(roundToTwoPointFive(0.9 * event.target.value));
   };
 
   const handleBench1RM = (event) => {
@@ -58,7 +58,6 @@ function App() {
           handlePress1RM={handlePress1RM}
           pressTM={pressTM}
         />
-        <Separator />
         <section>
           <Routes>
             <Route
