@@ -1,45 +1,65 @@
 import React, { Fragment } from "react";
-import Monday from "../Days/Monday/Monday";
-import Tuesday from "../Days/Tuesday/Tuesday";
-import Thursday from "../Days/Thursday/Thursday";
-import Friday from "../Days/Friday/Friday";
-
 import UniversalDayPrototype from "../Days/UniversalDayPrototype/UniversalDayPrototype";
 
 const FourDays = (props) => {
   const daysProperties = {
-    monday: {
-      nameVariant: "Poniedziałek",
-      benchTrainingMax: props.benchTrainingMax,
-      pressTrainingMax: props.pressTrainingMax,
-      arrayNo: 0
+    fourDays: {
+      monday: {
+        nameVariant: "Poniedziałek",
+        benchTrainingMax: props.benchTrainingMax,
+        pressTrainingMax: props.pressTrainingMax,
+        arrayNo: 0,
+      },
+      tuesday: {
+        nameVariant: "Wtorek",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+        arrayNo: 1,
+      },
+      thursday: {
+        nameVariant: "Czwartek",
+        benchTrainingMax: props.benchTrainingMax,
+        arrayNo: 2,
+      },
+      friday: {
+        nameVariant: "Piątek",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+        arrayNo: 3,
+      },
     },
-    tuesday: {
-      nameVariant: "Wtorek",
-      deadliftTrainingMax: props.deadliftTrainingMax,
-      squatTrainingMax: props.squatTrainingMax,
-      arrayNo: 1
+    fiveDays: {
+      // monday: daysProperties.fourDays.monday,
+      // tuesday: daysProperties.fourDays.tuesday,
+      wednesday5d: {
+        nameVariant: "Środa",
+        benchTrainingMax: props.benchTrainingMax,
+        pressTrainingMax: props.pressTrainingMax,
+        arrayNo: 4,
+      },
+      thursday: {
+        nameVariant: "Czwartek",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+        arrayNo: 3,
+      },
+      friday: {
+        nameVariant: "Piątek",
+        benchTrainingMax: props.benchTrainingMax,
+        arrayNo: 2,
+      },
     },
-    thursday: {
-      nameVariant: "Czwartek",
-      benchTrainingMax: props.benchTrainingMax,
-      arrayNo: 2
-    },
-    friday: {
-      nameVariant: "Piątek",
-      deadliftTrainingMax: props.deadliftTrainingMax,
-      squatTrainingMax: props.squatTrainingMax,
-      arrayNo: 3
-    }
+    sixDays: {
 
+    },
   };
 
   return (
     <Fragment>
-      <UniversalDayPrototype {...daysProperties.monday} />
-      <UniversalDayPrototype {...daysProperties.tuesday} />
-      <UniversalDayPrototype {...daysProperties.thursday} />
-      <UniversalDayPrototype {...daysProperties.friday}/>
+      <UniversalDayPrototype {...daysProperties.fourDays.monday} />
+      {/* <UniversalDayPrototype {...daysProperties.fourDays.tuesday} />
+      <UniversalDayPrototype {...daysProperties.fourDays.thursday} />
+      <UniversalDayPrototype {...daysProperties.fourDays.friday} /> */}
     </Fragment>
   );
 };
