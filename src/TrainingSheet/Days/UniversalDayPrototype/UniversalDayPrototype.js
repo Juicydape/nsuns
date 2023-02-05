@@ -166,7 +166,7 @@ const UniversalDayPrototype = (props) => {
     ],
   ];
 
-  const primaryExercise = progressions[0][0].map((set) => {
+  const primaryExercise = progressions[props.arrayNo][0].map((set) => {
     return (
       <p
         className={classes["day-container__exercise"]}
@@ -177,7 +177,7 @@ const UniversalDayPrototype = (props) => {
     );
   });
 
-  const secondaryExercise = progressions[0][1].map((set) => {
+  const secondaryExercise = progressions[props.arrayNo][1].map((set) => {
     return (
       <p
         className={classes["day-container__exercise"]}
