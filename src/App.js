@@ -58,7 +58,6 @@ function App() {
           handlePress1RM={handlePress1RM}
           pressTM={pressTM}
         />
-        <Separator />
         <section>
           <Routes>
             <Route
