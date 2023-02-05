@@ -4,10 +4,13 @@ import Tuesday from '../Days/Tuesday/Tuesday';
 import Thursday from '../Days/Thursday/Thursday';
 import Friday from '../Days/Friday/Friday';
 
+import UniversalDayPrototype from "../Days/UniversalDayPrototype/UniversalDayPrototype";
+
 const FourDays = (props) => {
   return (
     <Fragment>
-      <Monday
+      <UniversalDayPrototype
+        nameVariant={"Poniedziałek"}
         benchTrainingMax={props.benchTrainingMax}
         pressTrainingMax={props.pressTrainingMax}
       />
