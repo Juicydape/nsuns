@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
-import UniversalDayPrototype from "./Days/UniversalDayPrototype/UniversalDayPrototype";
+import UniversalDayPrototype from "./DayTemplate/DayTemplate";
 
 const TrainingSheet = (props) => {
   const daysProperties = {

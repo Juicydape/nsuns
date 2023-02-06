@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from "react";
-import classes from "../../Grid.module.scss";
-import { roundToTwoPointFive } from "../../../roundingLogic";
+import classes from "../Grid.module.scss";
+import { roundToTwoPointFive } from "../../roundingLogic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const UniversalDayPrototype = (props) => {
+const DayTemplate = (props) => {
   const [showSection, setShowSection] = useState(true);
 
   const handleShowSection = () => {
@@ -235,4 +235,4 @@ const UniversalDayPrototype = (props) => {
   );
 };
 
-export default UniversalDayPrototype;
+export default DayTemplate;
