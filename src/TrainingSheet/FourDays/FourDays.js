@@ -29,9 +29,7 @@ const FourDays = (props) => {
       },
     },
     fiveDays: {
-      // monday: daysProperties.fourDays.monday,
-      // tuesday: daysProperties.fourDays.tuesday,
-      wednesday5d: {
+      wednesday: {
         nameVariant: "Środa",
         benchTrainingMax: props.benchTrainingMax,
         pressTrainingMax: props.pressTrainingMax,
@@ -50,16 +48,33 @@ const FourDays = (props) => {
       },
     },
     sixDays: {
-
+      saturday: {
+        nameVariant: "Sobota",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+      }
     },
   };
+
+  daysProperties.fiveDays.monday = daysProperties.fourDays.monday;
+  daysProperties.fiveDays.tuesday = daysProperties.fiveDays.tuesday;
+  daysProperties.sixDays.monday = daysProperties.fourDays.monday;
+  daysProperties.sixDays.tuesday = daysProperties.fourDays.friday;
+  daysProperties.sixDays.tuesday.nameVariant = "Wtorek";
+  daysProperties.sixDays.wednesday = daysProperties.fiveDays.wednesday;
+  daysProperties.sixDays.thursday = daysProperties.fourDays.tuesday;
+  daysProperties.sixDays.thursday.nameVariant = "Czwartek";
+  daysProperties.sixDays.friday = daysProperties.fourDays.thursday;
+  daysProperties.sixDays.friday.nameVariant = "Piątek";
+
+
 
   return (
     <Fragment>
       <UniversalDayPrototype {...daysProperties.fourDays.monday} />
-      {/* <UniversalDayPrototype {...daysProperties.fourDays.tuesday} />
+      <UniversalDayPrototype {...daysProperties.fourDays.tuesday} />
       <UniversalDayPrototype {...daysProperties.fourDays.thursday} />
-      <UniversalDayPrototype {...daysProperties.fourDays.friday} /> */}
+      <UniversalDayPrototype {...daysProperties.fourDays.friday} />
     </Fragment>
   );
 };
