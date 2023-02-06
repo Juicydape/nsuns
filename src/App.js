@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
 import classes from "./App.module.css";
 
 import { roundToTwoPointFive } from "./roundingLogic";
@@ -8,10 +7,7 @@ import Header from "./Header/Header";
 import Evaluation from "./Evaluation/Evaluation";
 // import Instructions from "./Instructions/Instructions";
 import Separator from "./UI/Separator/Separator";
-
-import FourDays from "./TrainingSheet/FourDays/FourDays";
-import FiveDays from "./TrainingSheet/FiveDays/FiveDays";
-import SixDays from "./TrainingSheet/SixDays/SixDays";
+import TrainingSheet from "./TrainingSheet/TrainingSheet";
 
 function App() {
   const [squatTM, setSquatTM] = useState("");
@@ -59,41 +55,12 @@ function App() {
           pressTM={pressTM}
         />
         <section>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <FourDays
-                  benchTrainingMax={benchCalc}
-                  pressTrainingMax={pressCalc}
-                  deadliftTrainingMax={deadliftCalc}
-                  squatTrainingMax={squatCalc}
-                />
-              }
-            />
-            <Route
-              path="/5d"
-              element={
-                <FiveDays
-                  benchTrainingMax={benchCalc}
-                  pressTrainingMax={pressCalc}
-                  deadliftTrainingMax={deadliftCalc}
-                  squatTrainingMax={squatCalc}
-                />
-              }
-            />
-            <Route
-              path="/6d"
-              element={
-                <SixDays
-                  benchTrainingMax={benchCalc}
-                  pressTrainingMax={pressCalc}
-                  deadliftTrainingMax={deadliftCalc}
-                  squatTrainingMax={squatCalc}
-                />
-              }
-            />
-          </Routes>
+          <TrainingSheet
+            benchTrainingMax={benchCalc}
+            pressTrainingMax={pressCalc}
+            deadliftTrainingMax={deadliftCalc}
+            squatTrainingMax={squatCalc}
+          />
         </section>
         <Separator className={classes["end-separator"]} />
         <p>Piotr Materna, {new Date().getFullYear()}</p>
