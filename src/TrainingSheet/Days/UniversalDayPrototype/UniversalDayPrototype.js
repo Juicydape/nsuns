@@ -191,7 +191,8 @@ const UniversalDayPrototype = (props) => {
   return (
     <div className={classes["day-container"]}>
       <h3 className={classes["day-container__title"]}>
-        {props.nameVariant} <button
+        {props.nameVariant}
+        <button
           className={classes["day-container__fold-icon"]}
           onClick={handleShowSection}
         >
@@ -218,7 +219,15 @@ const UniversalDayPrototype = (props) => {
           </div>
           <div className={classes["day-container__assistance-work"]}>
             <p className={classes["day-container__exercise-title"]}>Asysty</p>
-            <p className={classes["day-container__exercise"] + " " + classes["day-container__exercise--assistance"]}>Ramiona, inne</p>
+            <p
+              className={
+                classes["day-container__exercise"] +
+                " " +
+                classes["day-container__exercise--assistance"]
+              }
+            >
+              Ramiona, inne
+            </p>
           </div>
         </Fragment>
       )}
