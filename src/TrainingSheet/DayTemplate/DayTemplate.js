@@ -166,6 +166,21 @@ const DayTemplate = (props) => {
     ],
   ];
 
+  const primaryExerciseName =
+    props.arrayNo === 0
+      ? "Wyciskanie płasko"
+      : props.arrayNo === 1
+      ? "Przysiad"
+      : props.arrayNo === 2
+      ? "Wyciskanie płasko"
+      : props.arrayNo === 3
+      ? "Martwy ciąg"
+      : props.arrayNo === 4
+      ? "Wyciskanie żołnierskie"
+      : props.arrayNo === 5
+      ? "Martwy ciąg"
+      : null;
+
   const primaryExercise = progressions[props.arrayNo][0].map((set) => {
     return (
       <p
@@ -176,6 +191,21 @@ const DayTemplate = (props) => {
       </p>
     );
   });
+
+  const secondaryExerciseName =
+    props.arrayNo === 0
+      ? "Wyciskanie żołnierskie"
+      : props.arrayNo === 1
+      ? "Martwy ciąg sumo"
+      : props.arrayNo === 2
+      ? "Wyciskanie wąsko"
+      : props.arrayNo === 3
+      ? "Przysiad przedni"
+      : props.arrayNo === 4
+      ? "Wyciskanie na skosie"
+      : props.arrayNo === 5
+      ? "Przysiad przedni"
+      : null;
 
   const secondaryExercise = progressions[props.arrayNo][1].map((set) => {
     return (
@@ -188,10 +218,25 @@ const DayTemplate = (props) => {
     );
   });
 
+  const accesories =
+    props.arrayNo === 0
+      ? "Klatka, ramiona, plecy"
+      : props.arrayNo === 1
+      ? "Nogi, brzuch"
+      : props.arrayNo === 2
+      ? "Ramiona, inne"
+      : props.arrayNo === 3
+      ? "Plecy, brzuch"
+      : props.arrayNo === 4
+      ? "Barki, klatka"
+      : props.arrayNo === 5
+      ? "Góra pleców, nogi"
+      : null;
+
   return (
     <div className={classes["day-container"]}>
       <h3 className={classes["day-container__title"]}>
-        {props.nameVariant}
+        {props.nameVariant + " "}
         <button
           className={classes["day-container__fold-icon"]}
           onClick={handleShowSection}
@@ -207,13 +252,13 @@ const DayTemplate = (props) => {
         <Fragment>
           <div className={classes["day-container__grid"]}>
             <p className={classes["day-container__exercise-title"]}>
-              Wyciskanie płasko
+              {primaryExerciseName}
             </p>
             {primaryExercise}
           </div>
           <div className={classes["day-container__grid"]}>
             <p className={classes["day-container__exercise-title"]}>
-              Wyciskanie wąsko
+              {secondaryExerciseName}
             </p>
             {secondaryExercise}
           </div>
@@ -226,7 +271,7 @@ const DayTemplate = (props) => {
                 classes["day-container__exercise--assistance"]
               }
             >
-              Ramiona, inne
+              {accesories}
             </p>
           </div>
         </Fragment>

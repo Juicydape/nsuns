@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Instructions /> */}
+      {/* <Instructions /> it's a modal */}
       <main>
         <Evaluation
           handleBench1RM={handleBench1RM}
@@ -63,7 +63,7 @@ function App() {
           />
         </section>
         <Separator className={classes["end-separator"]} />
-        <p>Piotr Materna, {new Date().getFullYear()}</p>
+        {/* <p>Piotr Materna, {new Date().getFullYear()}</p> */}
       </main>
     </div>
   );
