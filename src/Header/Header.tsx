@@ -7,7 +7,7 @@ import {
   solid,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={classes.header}>
       <h1 className={classes.header__heading}>
@@ -20,22 +20,22 @@ const Header = () => {
       <nav className={classes.header__nav}>
         <ul className={classes["header__links-container"]}>
           <li className={classes["header__link-container"]}>
-            <Link className={classes["header__link-item"]} to="/">
+            <Link className={classes["header__link-item"]} to="/nsuns">
               4-dniowy
             </Link>
           </li>
           <li className={classes["header__link-container"]}>
-            <Link className={classes["header__link-item"]} to="/5d">
+            <Link className={classes["header__link-item"]} to="/nsuns/5d">
               5-dniowy
             </Link>
           </li>
           <li className={classes["header__link-container"]}>
-            <Link className={classes["header__link-item"]} to="/6d">
+            <Link className={classes["header__link-item"]} to="/nsuns/6d">
               6-dniowy
             </Link>
           </li>
           <li className={classes["header__link-container"]}>
-            <a className={classes["header__link-item"] + " " + classes["header__link-item--icon"]} href="index.html">
+            <a onClick={() => {props.openModal(true)}}className={classes["header__link-item"] + " " + classes["header__link-item--icon"]} href="#">
               <FontAwesomeIcon icon={solid("circle-info")} />
             </a>
           </li>

@@ -1,58 +1,57 @@
 .eval {
   max-width: 95%;
   margin: 0 auto;
-
-  &__heading {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 1em;
-  }
-
-  &__form {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-row-gap: 1em;
-
-  }
-
-  &__fold-icon {
-    padding: 0 10px;
-    border: none;
-    background: none;
-    color: var(--tc);
-    cursor: pointer;
-  }
-
-  &__title {
-    margin-inline-start: 1em;
-    font-size: 1.1rem;
-  }
-
-  &__label-container {
-    max-width: 280px;
-    margin: 0.1em auto;
-    padding: 0.3em 0;
-    display: flex;
-    align-items: center;
-  }
 }
 
-.eval__label-container label {
+.evalHeading {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+.evalForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 1em;
+}
+
+.evalFoldIcon {
+  padding: 0 10px;
+  border: none;
+  background: none;
+  color: var(--tc);
+  cursor: pointer;
+}
+
+.EvalTitle {
+  margin-inline-start: 1em;
+  font-size: 1.1rem;
+}
+
+.evalLabelContainer {
+  max-width: 280px;
+  margin: 0.1em auto;
+  padding: 0.3em 0;
+  display: flex;
+  align-items: center;
+}
+
+.evalLabelContainer label {
   width: 38px;
 }
 
-.eval__label-container input {
+.evalLabelContainer input {
   padding: 0.2em 0.4em;
 }
 
 @media (min-width: 768px) {
   .eval {
-    &__form {
+    &Form {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
-    &__exercise-container {
+    &ExerciseContainer {
       margin: 1.2em 0;
       padding: 0 2em;
     }
@@ -61,14 +60,14 @@
 
 @media (min-width: 992px) {
   .eval {
-    &__heading {
+    &Heading {
       margin-bottom: 0;
     }
-    &__form {
+    &Form {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
     }
-    &__exercise-container {
+    &ExerciseContainer {
       margin: 1.2em 0;
       padding: 0 2em;
     }
@@ -76,11 +75,11 @@
 }
 @media (min-width: 1200px) {
   .eval {
-    &__form {
+    &Form {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(1, 1fr);
     }
-    &__exercise-container {
+    &ExerciseContainer {
       margin: 1.2em 0;
       padding: 0 2em;
     }
