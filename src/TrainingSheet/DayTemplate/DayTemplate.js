@@ -4,7 +4,7 @@ import { r2p5 } from "../../roundingLogic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const DayTemplate: React.FC = (props) => {
+const DayTemplate = (props) => {
   const [showSection, setShowSection] = useState(true);
 
   const handleShowSection = () => {
@@ -219,16 +219,21 @@ const DayTemplate: React.FC = (props) => {
       ? "Góra pleców, nogi"
       : null;
 
+      const tableCaptionOffset = {"transform": showSection ? "translateY(0)" : "translateY(5px)"}
+
+      const arrowIconBtn = showSection ? (
+        <FontAwesomeIcon icon={solid("arrow-up")} />
+      ) : (
+        <FontAwesomeIcon icon={solid("arrow-down")} />
+      )
+
+      
   return (
     <table>
-      <caption>
-        {props.nameVariant}{" "}
+      <caption style={tableCaptionOffset}>
+        {props.nameVariant + " "}
         <button onClick={handleShowSection} className={classes.faIcon}>
-          {showSection ? (
-            <FontAwesomeIcon icon={solid("arrow-up")} />
-          ) : (
-            <FontAwesomeIcon icon={solid("arrow-down")} />
-          )}
+          {arrowIconBtn}
         </button>
       </caption>
 

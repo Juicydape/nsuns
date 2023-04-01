@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import classes from "./App.module.css";
-
 import { r2p5 } from "./roundingLogic";
-
 import Header from "./Header/Header";
 import Modal from "./Modal/Modal";
 import Evaluation from "./Evaluation/Evaluation";
 import Instructions from "./Instructions/Instructions";
-import Separator from "./UI/Separator/Separator";
 import TrainingSheet from "./TrainingSheet/TrainingSheet";
+import { Footer } from "./Footer/Footer";
 
-const App: React.FC = () => {
+const App = () => {
   const [squatTM, setSquatTM] = useState("");
   const [squatCalc, setSquatCalc] = useState("");
   const [benchTM, setBenchTM] = useState("");
@@ -42,15 +40,20 @@ const App: React.FC = () => {
     setPressTM(r2p5(0.9 * event.target.value));
   };
 
+  const magicNumber = 306;
+  const mainStyle = {
+    "minHeight": `calc(100vh - ${magicNumber}px)`
+  }
+
   return (
     <div className="App">
       <Header openModal={setInstructionsAreOpen} />
       {instructionsAreOpen && (
         <Modal setInstructionsAreOpen={setInstructionsAreOpen}>
-          <Instructions setInstructionsAreOpen={setInstructionsAreOpen}/>
+          <Instructions setInstructionsAreOpen={setInstructionsAreOpen} />
         </Modal>
       )}
-      <main>
+      <main style={mainStyle}>
         <Evaluation
           handleBench1RM={handleBench1RM}
           benchTM={benchTM}
@@ -69,10 +72,10 @@ const App: React.FC = () => {
             squatTrainingMax={squatCalc}
           />
         </section>
-        <Separator className={classes["end-separator"]} />
       </main>
+        <Footer />
     </div>
   );
-}
+};
 
 export default App;

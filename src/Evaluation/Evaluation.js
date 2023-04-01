@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Evaluation.module.scss";
 
-const Evaluation: React.FC = (props) => {
+const Evaluation = (props) => {
   return (
     <section className={classes.eval}>
       <h2 className={classes.evalHeading}>Wprowadź wyniki</h2>

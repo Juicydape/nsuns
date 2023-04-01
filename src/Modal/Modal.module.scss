@@ -6,6 +6,7 @@
     right: 0;
     background-color: rgba(0, 0, 0, .7);
     z-index: 10;
+    animation: 1s modalOpacity 0s forwards;
 }
 
 .modal {
@@ -20,4 +21,15 @@
     background-color: whitesmoke;
     color: black;
     z-index: 10;
+    animation: 1s modalOpacity 0s forwards;
+}
+
+@keyframes modalOpacity { 
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
