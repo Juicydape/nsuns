@@ -1,0 +1,35 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 10;
+    animation: 1s modalOpacity 0s forwards;
+}
+
+.modal {
+    padding: 1em;
+    min-width: 300px;
+    width: 90%;
+    max-width: 992px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    color: black;
+    z-index: 10;
+    animation: 1s modalOpacity 0s forwards;
+}
+
+@keyframes modalOpacity { 
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

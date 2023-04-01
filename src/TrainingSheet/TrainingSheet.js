@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
-import UniversalDayPrototype from "./DayTemplate/DayTemplate";
+import DayTemplate from "./DayTemplate/DayTemplate";
 
 const TrainingSheet = (props) => {
   const daysProperties = {
@@ -30,6 +30,18 @@ const TrainingSheet = (props) => {
       },
     },
     fiveDays: {
+      monday: {
+        nameVariant: "Poniedziałek",
+        benchTrainingMax: props.benchTrainingMax,
+        pressTrainingMax: props.pressTrainingMax,
+        arrayNo: 0,
+      },
+      tuesday: {
+        nameVariant: "Wtorek",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+        arrayNo: 1,
+      },
       wednesday: {
         nameVariant: "Środa",
         benchTrainingMax: props.benchTrainingMax,
@@ -49,6 +61,35 @@ const TrainingSheet = (props) => {
       },
     },
     sixDays: {
+      monday: {
+        nameVariant: "Poniedziałek",
+        benchTrainingMax: props.benchTrainingMax,
+        pressTrainingMax: props.pressTrainingMax,
+        arrayNo: 0,
+      },
+      tuesday: {
+        nameVariant: "Wtorek",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+        arrayNo: 3,
+      },
+      wednesday: {
+        nameVariant: "Środa",
+        benchTrainingMax: props.benchTrainingMax,
+        pressTrainingMax: props.pressTrainingMax,
+        arrayNo: 4,
+      },
+      thursday: {
+        nameVariant: "Czwartek",
+        deadliftTrainingMax: props.deadliftTrainingMax,
+        squatTrainingMax: props.squatTrainingMax,
+        arrayNo: 1,
+      },
+      friday: {
+        nameVariant: "Piątek",
+        benchTrainingMax: props.benchTrainingMax,
+        arrayNo: 2,
+      },
       saturday: {
         nameVariant: "Sobota",
         deadliftTrainingMax: props.deadliftTrainingMax,
@@ -58,54 +99,41 @@ const TrainingSheet = (props) => {
     },
   };
 
-  daysProperties.fiveDays.monday = daysProperties.fourDays.monday;
-  daysProperties.fiveDays.tuesday = daysProperties.fourDays.tuesday;
-  daysProperties.sixDays.monday = daysProperties.fourDays.monday;
-  daysProperties.sixDays.tuesday = daysProperties.fourDays.friday;
-  daysProperties.sixDays.tuesday.nameVariant = "Wtorek";
-  daysProperties.sixDays.wednesday = daysProperties.fiveDays.wednesday;
-  daysProperties.sixDays.thursday = daysProperties.fourDays.tuesday;
-  daysProperties.sixDays.thursday.nameVariant = "Czwartek";
-  daysProperties.sixDays.friday = daysProperties.fourDays.thursday;
-  daysProperties.sixDays.friday.nameVariant = "Piątek";
-
-  console.log(daysProperties)
-
   return (
     <Routes>
       <Route
-        path="/"
+        path="/nsuns/"
         element={
           <Fragment>
-            <UniversalDayPrototype {...daysProperties.fourDays.monday} />
-            <UniversalDayPrototype {...daysProperties.fourDays.tuesday} />
-            <UniversalDayPrototype {...daysProperties.fourDays.thursday} />
-            <UniversalDayPrototype {...daysProperties.fourDays.friday} />
+            <DayTemplate {...daysProperties.fourDays.monday} />
+            <DayTemplate {...daysProperties.fourDays.tuesday} />
+            <DayTemplate {...daysProperties.fourDays.thursday} />
+            <DayTemplate {...daysProperties.fourDays.friday} />
           </Fragment>
         }
       />
       <Route
-        path="/5d"
+        path="/nsuns/5d"
         element={
-            <Fragment>
-            <UniversalDayPrototype {...daysProperties.fiveDays.monday} />
-            <UniversalDayPrototype {...daysProperties.fiveDays.tuesday} />
-            <UniversalDayPrototype {...daysProperties.fiveDays.wednesday} />
-            <UniversalDayPrototype {...daysProperties.fiveDays.thursday} />
-            <UniversalDayPrototype {...daysProperties.fiveDays.friday} />
+          <Fragment>
+            <DayTemplate {...daysProperties.fiveDays.monday} />
+            <DayTemplate {...daysProperties.fiveDays.tuesday} />
+            <DayTemplate {...daysProperties.fiveDays.wednesday} />
+            <DayTemplate {...daysProperties.fiveDays.thursday} />
+            <DayTemplate {...daysProperties.fiveDays.friday} />
           </Fragment>
         }
       />
       <Route
-        path="/6d"
+        path="/nsuns/6d"
         element={
-            <Fragment>
-            <UniversalDayPrototype {...daysProperties.sixDays.monday} />
-            <UniversalDayPrototype {...daysProperties.sixDays.tuesday} />
-            <UniversalDayPrototype {...daysProperties.sixDays.wednesday} />
-            <UniversalDayPrototype {...daysProperties.sixDays.thursday} />
-            <UniversalDayPrototype {...daysProperties.sixDays.friday} />
-            <UniversalDayPrototype {...daysProperties.sixDays.saturday} />
+          <Fragment>
+            <DayTemplate {...daysProperties.sixDays.monday} />
+            <DayTemplate {...daysProperties.sixDays.tuesday} />
+            <DayTemplate {...daysProperties.sixDays.wednesday} />
+            <DayTemplate {...daysProperties.sixDays.thursday} />
+            <DayTemplate {...daysProperties.sixDays.friday} />
+            <DayTemplate {...daysProperties.sixDays.saturday} />
           </Fragment>
         }
       />

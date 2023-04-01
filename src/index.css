@@ -6,7 +6,7 @@
 
 :root {
   --dark-success: #4381C1;
-  --dark-bg: #4E4B5C;
+  --dark-bg: #5f5c6b;
   --dark-attention: #BEA2C2;
 
   --day-success: #CAE7B9;
@@ -16,13 +16,18 @@
 }
 
 body {
-  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #5f5c6b;
+  background-color: whitesmoke;
   color: white;
+}
+
+@media ( min-width: 1200px ) {
+  body {
+    min-height: 937px;
+  }
 }
