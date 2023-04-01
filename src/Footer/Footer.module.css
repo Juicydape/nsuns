@@ -1,4 +1,4 @@
-footer {
+.Footer {
     width: 100%;
     position: relative;
     bottom: 0;
@@ -10,7 +10,7 @@ footer {
     
 }
 
-footer::before {
+.Footer::before {
     content: '';
     display: block;
     width: 100%;
