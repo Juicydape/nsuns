@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import classes from "./DayTemplate.module.scss";
-import { r2p5 } from "../../roundingLogic";
+import { r2p5 } from "../../roundingLogic.ts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 

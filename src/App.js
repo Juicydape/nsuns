@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./App.module.css";
-import { r2p5 } from "./roundingLogic";
+import { r2p5 } from "./roundingLogic.ts";
 import Header from "./Header/Header";
 import Modal from "./Modal/Modal";
 import Evaluation from "./Evaluation/Evaluation";
