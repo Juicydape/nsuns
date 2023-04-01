@@ -41,58 +41,17 @@
     transition: text-decoration-color .5s;
 
     &:hover {
-        text-decoration-color: gold;
+        text-decoration-color: var(--dark-bg);
     }
 
     &--icon {
         transition: color .5s;
         &:hover {
-            color: gold;
+            color: var(--dark-bg);
         }
     }
   }
 }
-
-// .header {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-
-//     margin-bottom: 1em;
-//     background-color: var(--dark-attention);
-
-//     &__heading {
-//         padding: 0.5em 0;
-//         text-align: center;
-//     }
-
-//     &__icon {
-//         transform: rotate(-40deg) translate(15px, 2px) scale(1.2);
-//     }
-
-//     &__nav {
-//         margin: 0 auto;
-//     }
-
-//     &__links-container {
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-//     }
-
-//     &__link-container {
-//         padding: 0.9em 3em;
-//         list-style-type: none;
-//     }
-
-//     &__link-item {
-//         text-transform: uppercase;
-//         color: #444;
-//         text-decoration: none;
-//         letter-spacing: 2px;
-//         cursor: pointer;
-//     }
-// }
 
 @media (min-width: 1200px) {
   .header {
