@@ -3,7 +3,7 @@ import classes from "./Instructions.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const Instructions = (props) => {
+export const Instructions = (props) => {
   return (
     <Fragment>
       <h2>Jak używać?</h2>
@@ -40,5 +40,3 @@ const Instructions = (props) => {
     </Fragment>
   );
 };
-
-export default Instructions;

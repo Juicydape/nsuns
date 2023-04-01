@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import DayTemplate from "./DayTemplate/DayTemplate";
 
-const TrainingSheet = (props) => {
+export const TrainingSheet = (props) => {
   const daysProperties = {
     fourDays: {
       monday: {
@@ -140,5 +140,3 @@ const TrainingSheet = (props) => {
     </Routes>
   );
 };
-
-export default TrainingSheet;

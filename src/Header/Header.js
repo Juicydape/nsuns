@@ -7,7 +7,7 @@ import {
   solid,
 } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-const Header = (props) => {
+export const Header = (props) => {
   return (
     <header className={classes.header}>
       <h1 className={classes.header__heading}>
@@ -44,5 +44,3 @@ const Header = (props) => {
     </header>
   );
 };
-
-export default Header;

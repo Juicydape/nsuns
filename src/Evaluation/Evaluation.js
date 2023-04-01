@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Evaluation.module.scss";
 
-const Evaluation = (props) => {
+export const Evaluation = (props) => {
   return (
     <section className={classes.eval}>
       <h2 className={classes.evalHeading}>Wprowadź wyniki</h2>
@@ -105,5 +105,3 @@ const Evaluation = (props) => {
     </section>
   );
 };
-
-export default Evaluation;
