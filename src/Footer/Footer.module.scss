@@ -4,7 +4,9 @@
     bottom: 0;
     margin: 4em 0 0 0;
     padding: 2em 0;
-    background-color: var(--dark-bg);
+    background: #2980b9;
+background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+background: linear-gradient(to right, #2e4963, #226c94);
     text-align: center;
     z-index: 4;
     
@@ -15,7 +17,9 @@
     display: block;
     width: 100%;
     height: 50px;
-    background-color: var(--dark-bg);
+    background: #2980b9;
+background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+background: linear-gradient(to right, #2e4963, #226c94);
     overflow: hidden;
     transform: translateY(-100%) rotate(1deg);
     z-index: 3;

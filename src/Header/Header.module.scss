@@ -4,7 +4,9 @@
   align-items: center;
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
-  background-color: var(--dark-bg);
+  background: #2980b9;
+background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+background: linear-gradient(to right, #2e4963, #226c94);
 
   &__heading {
     padding: 0.2em 0;
@@ -38,16 +40,16 @@
     text-transform: uppercase;
     text-decoration-color: transparent;
     cursor: pointer;
-    transition: text-decoration-color .5s;
+    transition: text-decoration-color .3s;
 
     &:hover {
-        text-decoration-color: var(--dark-bg);
+        text-decoration-color: #BFCC94;
     }
 
     &--icon {
-        transition: color .5s;
+        transition: color .3s;
         &:hover {
-            color: var(--dark-bg);
+            color: #BFCC94;
         }
     }
   }
